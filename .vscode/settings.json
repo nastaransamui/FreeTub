@@ -1,0 +1,7 @@
+{
+    "php.validate.executablePath": "/usr/bin/php",
+    "emmet.includeLanguages":{
+        "php": "html",
+        "javascript": "html",
+    }
+}
