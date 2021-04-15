@@ -10,7 +10,7 @@ use yii\bootstrap4\NavBar;
         'options' => ['class' => 'navbar-expand-lg navbar-light bg-light shadow-sm']
     ]);
     $menuItems = [
-        ['label' => 'Create', 'url' => ['/site/index']],
+        ['label' => 'Create', 'url' => ['/video/create']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
