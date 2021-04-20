@@ -48,25 +48,12 @@ class VideoController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Video::find()
-                ->creator(Yii::$app->user->id)
+            ->creator(Yii::$app->user->id)
             ->latest(),
         ]);
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single Video model.
-     * @param string $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
         ]);
     }
 
@@ -78,8 +65,6 @@ class VideoController extends Controller
     public function actionCreate()
     {
         $model = new Video();
-
-
         $model->video = UploadedFile::getInstanceByName('video');
 
 
